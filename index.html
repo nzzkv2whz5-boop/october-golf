@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#173f35">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="October Golf">
+  <meta name="description" content="Find Maricopa County golf courses open during October 2026 overseeding.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>October Golf</title>
+</head>
+<body>
+  <header class="hero">
+    <div class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 64 64"><path d="M20 53h25M31 53V12m0 2 19 6-19 7"/><circle cx="31" cy="47" r="3"/></svg>
+    </div>
+    <div>
+      <p class="eyebrow">MARICOPA COUNTY · 2026</p>
+      <h1>October Golf</h1>
+      <p class="subtitle">Courses open while the Valley overseeds.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="date-card" aria-labelledby="date-heading">
+      <div class="date-heading-row">
+        <div>
+          <p class="label" id="date-heading">Choose a date</p>
+          <p class="selected-date" id="selectedDate">Thursday, October 1</p>
+        </div>
+        <div class="date-stepper" aria-label="Change day">
+          <button id="previousDay" aria-label="Previous day">−</button>
+          <span id="dayNumber">1</span>
+          <button id="nextDay" aria-label="Next day">+</button>
+        </div>
+      </div>
+      <input id="daySlider" type="range" min="1" max="31" value="1" aria-label="October day">
+      <div class="range-labels" aria-hidden="true"><span>OCT 1</span><span>OCT 31</span></div>
+    </section>
+
+    <section class="results" aria-live="polite">
+      <div class="results-heading">
+        <div>
+          <p class="result-count"><strong id="openCount">0</strong> courses open</p>
+          <p class="result-note" id="resultNote">Based on published overseed dates</p>
+        </div>
+        <button class="filter-button" id="filterButton" aria-expanded="false" aria-controls="filters">
+          <span aria-hidden="true">⌕</span> Filter
+        </button>
+      </div>
+
+      <div class="filters" id="filters" hidden>
+        <label for="searchInput">Course or city</label>
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Search courses or cities" autocomplete="off">
+          <button id="clearSearch" aria-label="Clear search" hidden>×</button>
+        </div>
+      </div>
+
+      <div class="course-list" id="courseList"></div>
+      <p class="empty-state" id="emptyState" hidden>No open courses match that search.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Source: Arizona Golf Association 2026 overseed schedule.</p>
+    <p>Dates can change. Confirm with the course before booking.</p>
+  </footer>
+
+  <template id="courseTemplate">
+    <article class="course-card">
+      <div class="course-main">
+        <div class="status-dot" aria-hidden="true"></div>
+        <div>
+          <h2 class="course-name"></h2>
+          <p class="course-detail"></p>
+          <p class="course-location"></p>
+        </div>
+      </div>
+      <span class="status">OPEN</span>
+    </article>
+  </template>
+
+  <script src="data/courses.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
