@@ -73,9 +73,10 @@ function render() {
     const contact = card.querySelector('.course-contact');
     if (course.phone) {
       const phone = card.querySelector('.course-phone');
-      phone.textContent = course.phone;
-      phone.href = `tel:+1${course.phone.replace(/\D/g, '')}`;
-      phone.setAttribute('aria-label', `Call ${course.facility} at ${course.phone}`);
+      const extension = course.phoneExtension ? ` ext. ${course.phoneExtension}` : '';
+      phone.textContent = `${course.phone}${extension}`;
+      phone.href = `tel:+1${course.phone.replace(/\D/g, '')}${course.phoneExtension ? `;ext=${course.phoneExtension}` : ''}`;
+      phone.setAttribute('aria-label', `Call ${course.facility} at ${course.phone}${extension}`);
     } else {
       contact.remove();
     }
