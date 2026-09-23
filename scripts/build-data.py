@@ -1,5 +1,6 @@
 from datetime import datetime
 from json import dumps
+from json import loads
 from pathlib import Path
 
 from openpyxl import load_workbook
@@ -8,6 +9,7 @@ from openpyxl import load_workbook
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "source" / "AZ-GOLF-2026-Overseed-Schedule.xlsx"
 OUTPUT = ROOT / "data" / "courses.js"
+FACILITIES = ROOT / "data" / "facilities.json"
 
 # Cities and communities in Maricopa County represented in the source workbook.
 # Queen Creek ZIP 85142 is in the Maricopa County portion; 85140 is excluded.
@@ -38,6 +40,7 @@ def included(city, zipcode):
 
 def main():
     ws = load_workbook(SOURCE, data_only=True, read_only=True).active
+    facilities = loads(FACILITIES.read_text(encoding="utf-8"))
     courses = []
     for facility, course, overseed, closure, reopening, city, zipcode in ws.iter_rows(
         min_row=2, values_only=True
@@ -46,9 +49,13 @@ def main():
         city = clean(city)
         if not facility or not included(city, zipcode):
             continue
+        course_name = clean(course) or None
+        contact = facilities.get(f"{facility} — {course_name}") or facilities.get(facility, {})
         courses.append({
             "facility": facility,
-            "course": clean(course) or None,
+            "course": course_name,
+            "phone": contact.get("phone"),
+            "phoneExtension": contact.get("extension"),
             "overseed": clean(overseed).lower() == "yes",
             "closure": iso(closure),
             "reopening": iso(reopening),

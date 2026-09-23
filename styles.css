@@ -94,6 +94,8 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px 40px; }
 .status-dot { flex: 0 0 9px; width: 9px; height: 9px; margin-top: 7px; border-radius: 50%; background: #38a875; box-shadow: 0 0 0 4px #e5f5ec; }
 .course-name { margin: 0; font-size: 17px; line-height: 1.25; }
 .course-detail, .course-location { margin: 3px 0 0; color: var(--muted); font-size: 13px; line-height: 1.35; }
+.course-contact { margin: 7px 0 0; font-size: 14px; }
+.course-phone { color: var(--green, #173f35); font-weight: 650; text-decoration: underline; text-underline-offset: 2px; }
 .course-detail:empty { display: none; }
 .status { flex: 0 0 auto; color: #237756; background: #e4f4eb; border-radius: 999px; padding: 5px 8px; font-size: 10px; font-weight: 900; letter-spacing: .07em; }
 .empty-state { padding: 30px 16px; text-align: center; color: var(--muted); }
