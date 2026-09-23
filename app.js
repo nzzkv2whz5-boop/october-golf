@@ -70,6 +70,15 @@ function render() {
       : course.facility;
     card.querySelector('.course-detail').textContent = detailFor(course, dateKey);
     card.querySelector('.course-location').textContent = `${course.city}, AZ ${course.zip}`;
+    const contact = card.querySelector('.course-contact');
+    if (course.phone) {
+      const phone = card.querySelector('.course-phone');
+      phone.textContent = course.phone;
+      phone.href = `tel:+1${course.phone.replace(/\D/g, '')}`;
+      phone.setAttribute('aria-label', `Call ${course.facility} at ${course.phone}`);
+    } else {
+      contact.remove();
+    }
     return card;
   }));
   emptyState.hidden = visible.length !== 0;
