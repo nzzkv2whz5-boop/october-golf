@@ -60,8 +60,8 @@
     "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
   },
   "Bellair Golf Park": {
-    "phone": "602-978-0330",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "602-513-7070",
+    "source": "https://www.bellairgolfpark.com/"
   },
   "Blackstone Country Club": {
     "phone": "623-707-8710",
@@ -72,8 +72,8 @@
     "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
   },
   "Briarwood Country Club": {
-    "phone": "623-584-5301",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "623-584-5600",
+    "source": "https://www.briarwoodcc.com/"
   },
   "Camelback Golf Club, JW Marriott": {
     "phone": "480-596-7050",
@@ -112,16 +112,17 @@
     "source": "https://www.coyotelakesgolfclub.com/contact/directions"
   },
   "Coyote Run Golf Course (Leisure World)": {
-    "phone": "480-832-0003",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-832-0000",
+    "source": "https://lwca.com/documents/41406/98322/COYOTE%20RUN%20LOCAL%20RULES.pdf/14ea5617-f2f4-609f-7ee7-fdbd2a801785",
+    "extension": "300"
   },
   "DC Ranch, The Country Club at": {
     "phone": "480-342-7200",
     "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
   },
   "Deer Valley Golf Course": {
-    "phone": "623-214-1100",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "623-544-6016",
+    "source": "https://suncitywest.com/contactinfo/"
   },
   "Desert Canyon Golf Club": {
     "phone": "480-837-1173",
@@ -143,6 +144,34 @@
     "phone": "480-595-4090",
     "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
   },
+  "Desert Mountain \u2014 Apache": {
+    "phone": "480-595-4090",
+    "source": "https://www.desertmountain.com/wp-content/uploads/2024/11/Desert_Mt_APACHE_COMBO_10.22.pdf"
+  },
+  "Desert Mountain \u2014 Chiricahua": {
+    "phone": "480-595-4850",
+    "source": "https://www.desertmountain.com/wp-content/uploads/2024/11/Desert_Mt_Chiricahua_COMBO_10.22.pdf"
+  },
+  "Desert Mountain \u2014 Cochise": {
+    "phone": "480-488-1362",
+    "source": "https://www.desertmountain.com/wp-content/uploads/2024/11/Desert_Mt_cochise_COMBO_Final.pdf"
+  },
+  "Desert Mountain \u2014 Geronimo": {
+    "phone": "480-488-1362",
+    "source": "https://www.desertmountain.com/wp-content/uploads/2025/08/Geronimo-Scorecard.pdf"
+  },
+  "Desert Mountain \u2014 No. 7": {
+    "phone": "480-437-2950",
+    "source": "https://members.desertmountain.com/files/DM%20MOUNTAIN%20DRIVE%202019-2020.pdf"
+  },
+  "Desert Mountain \u2014 Outlaw": {
+    "phone": "480-595-4880",
+    "source": "https://www.desertmountain.com/wp-content/uploads/2024/11/Desert_Mt_outlaw_COMBO_FINAL.pdf"
+  },
+  "Desert Mountain \u2014 Renegade": {
+    "phone": "480-595-4000",
+    "source": "https://www.desertmountain.com/contact/"
+  },
   "Desert Sands Golf Course": {
     "phone": "480-832-0210",
     "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
@@ -160,8 +189,8 @@
     "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
   },
   "Eagle Mountain Golf Club": {
-    "phone": "480-816-1964",
-    "source": "https://www.eaglemtn.com/wp-content/uploads/sites/8973/2023/06/2014-Scorecard.pdf"
+    "phone": "480-816-1234",
+    "source": "https://www.experiencefountainhills.org/location/eagle-mountain"
   },
   "Echo Mesa Golf Course": {
     "phone": "623-544-6014",
@@ -184,28 +213,28 @@
     "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
   },
   "Falcon Dunes Golf Course": {
-    "phone": "623-935-7800",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "623-535-9334",
+    "source": "https://56fss.com/event/golf-course-closed-4/"
   },
   "FireRock Country Club": {
-    "phone": "480-836-8000",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-836-8100",
+    "source": "https://www.firerockcc.com/"
   },
   "Foothills Golf Club": {
     "phone": "480-460-5350",
     "source": "https://www.thefoothillsgc.com/contact/location"
   },
   "Fountain of the Sun Country Club": {
-    "phone": "480-986-3158",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-986-3128",
+    "source": "https://foscc-az.com/more-info/contact-us-directions"
   },
   "Futures Course @ The 500 Club": {
     "phone": "623-434-6527",
     "source": "https://the500club.com/golf-club-rentals/"
   },
   "Gainey Ranch Golf Club": {
-    "phone": "480-483-2582",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-951-0022",
+    "source": "https://www.invitedclubs.com/clubs/gainey-ranch-golf-club/our-story/directions-and-hours"
   },
   "Golden Hills Golf Club": {
     "phone": "480-832-1661",
@@ -228,8 +257,8 @@
     "source": "https://www.tempetourism.com/events/grass-clippings-special-events/"
   },
   "Grayhawk Golf Club": {
-    "phone": "800-727-8331",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-502-1800",
+    "source": "https://grayhawkgolf.com/contact-us/"
   },
   "Great Eagle Golf Club": {
     "phone": "623-584-6000",
@@ -240,8 +269,9 @@
     "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
   },
   "Heron Lakes Golf Course (Leisure World)": {
-    "phone": "480-832-0003",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-832-0000",
+    "source": "https://golfat55.com/leisure-world/contacts/",
+    "extension": "400"
   },
   "HillCrest Golf Club": {
     "phone": "623-584-1500",
@@ -260,8 +290,8 @@
     "source": "https://juniornational.org/"
   },
   "Ken McDonald Golf Course": {
-    "phone": "480-350-5250",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-878-3332",
+    "source": "https://www.playkenmcdonald.com/"
   },
   "Kierland Golf Club, The Westin": {
     "phone": "480-922-9283",
@@ -308,8 +338,8 @@
     "source": "https://www.royalpalmsgolf.com/contact-us/"
   },
   "Lone Tree Golf Club": {
-    "phone": "480-219-0830",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-219-0831",
+    "source": "https://www.lonetreegolf18.com/golf/course-details"
   },
   "Longbow Golf Club": {
     "phone": "480-807-5400",
@@ -332,20 +362,20 @@
     "source": "https://www.ncgolf.com/golfcourses/mcdowell-mountain-golf-club"
   },
   "Mesa Country Club": {
-    "phone": "480-964-3514",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-964-1797",
+    "source": "https://www.mesacountryclub.com/contact-us/"
   },
   "Mirabel Club, The": {
-    "phone": "480-437-1520",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-437-1500",
+    "source": "https://www.mirabel.com/contact"
   },
   "Moon Valley Country Club": {
-    "phone": "602-942-1278",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "602-942-0000",
+    "source": "https://www.moonvalleycc.com/golf"
   },
   "Mountain Shadows Golf Course": {
-    "phone": "602-951-5427",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-624-5433",
+    "source": "https://mountainshadows.com/golf/"
   },
   "North Golf Course at Sun City": {
     "phone": "623-876-3010",
@@ -382,6 +412,10 @@
   "Papago Golf Club": {
     "phone": "602-275-8428",
     "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+  },
+  "Paradise Peak West": {
+    "phone": "480-515-2043",
+    "source": "https://www.theparadisepeakwest.com/"
   },
   "Paradise Valley Country Club": {
     "phone": "602-840-8100",
@@ -548,8 +582,8 @@
     "source": "https://www.talkingstickgolfclub.com/talking-stick-premier-practice/"
   },
   "Tatum Ranch Golf Club": {
-    "phone": "480-962-4653",
-    "source": "https://desertgolfer.com/wp-content/uploads/2026/02/Desert-Feb-Mar2026-Web.pdf"
+    "phone": "480-515-5908",
+    "source": "https://www.tatumranchgc.com/sites/www.tatumranchgc.com/files/2024-2025_tatum_ranch_golf_guide.pdf"
   },
   "Terravita Golf & Country Club": {
     "phone": "480-488-7962",
