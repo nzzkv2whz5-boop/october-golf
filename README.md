@@ -17,6 +17,11 @@ A small, installable web app that shows which Maricopa County golf courses are o
 
 The deployed app is static and stores no personal data.
 
+The selected October date remains visible while scrolling. Use the previous/next
+buttons to move a day at a time, or open the calendar to pick any day in the month.
+The calendar closes after a date is chosen. Run `node --test tests/date-picker.test.js`
+to check date-picker interactions.
+
 ## Course phone numbers
 
 `data/facilities.json` is the persistent contact directory. Keys normally match the
