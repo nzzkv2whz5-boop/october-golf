@@ -1,4 +1,4 @@
-const CACHE = 'october-golf-v1';
+const CACHE = 'october-golf-v2';
 const ASSETS = [
   './', './index.html', './styles.css', './app.js', './data/courses.js',
   './manifest.webmanifest', './icons/icon.svg', './icons/icon-192.png',
