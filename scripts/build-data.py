@@ -55,6 +55,7 @@ def main():
             "facility": facility,
             "course": course_name,
             "phone": contact.get("phone"),
+            "phoneExtension": contact.get("extension"),
             "overseed": clean(overseed).lower() == "yes",
             "closure": iso(closure),
             "reopening": iso(reopening),
