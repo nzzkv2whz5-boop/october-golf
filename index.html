@@ -28,19 +28,23 @@
 
   <main>
     <section class="date-card" aria-labelledby="date-heading">
+      <div class="date-topline">
+        <p class="label" id="date-heading">OCTOBER 2026</p>
+        <button class="calendar-toggle" id="calendarButton" aria-expanded="false" aria-controls="calendarPanel">Show calendar</button>
+      </div>
       <div class="date-heading-row">
-        <div>
-          <p class="label" id="date-heading">Choose a date</p>
-          <p class="selected-date" id="selectedDate">Thursday, October 1</p>
-        </div>
+        <p class="selected-date" id="selectedDate">Thu, Oct 1</p>
         <div class="date-stepper" aria-label="Change day">
-          <button id="previousDay" aria-label="Previous day">−</button>
-          <span id="dayNumber">1</span>
-          <button id="nextDay" aria-label="Next day">+</button>
+          <button id="previousDay" aria-label="Previous day">‹</button>
+          <button id="nextDay" aria-label="Next day">›</button>
         </div>
       </div>
-      <input id="daySlider" type="range" min="1" max="31" value="1" aria-label="October day">
-      <div class="range-labels" aria-hidden="true"><span>OCT 1</span><span>OCT 31</span></div>
+      <div class="calendar-panel" id="calendarPanel" hidden>
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="calendar-days" id="calendarDays" role="group" aria-label="Choose a day in October 2026"></div>
+      </div>
     </section>
 
     <section class="results" aria-live="polite">
