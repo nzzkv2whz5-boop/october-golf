@@ -1,9 +1,10 @@
 const courses = window.OCTOBER_GOLF_COURSES || [];
-const daySlider = document.querySelector('#daySlider');
-const dayNumber = document.querySelector('#dayNumber');
 const selectedDate = document.querySelector('#selectedDate');
 const previousDay = document.querySelector('#previousDay');
 const nextDay = document.querySelector('#nextDay');
+const calendarButton = document.querySelector('#calendarButton');
+const calendarPanel = document.querySelector('#calendarPanel');
+const calendarDays = document.querySelector('#calendarDays');
 const openCount = document.querySelector('#openCount');
 const resultNote = document.querySelector('#resultNote');
 const courseList = document.querySelector('#courseList');
@@ -20,9 +21,42 @@ const longDate = new Intl.DateTimeFormat('en-US', {
 const shortDate = new Intl.DateTimeFormat('en-US', {
   month: 'short', day: 'numeric', timeZone: 'America/Phoenix'
 });
+const compactDate = new Intl.DateTimeFormat('en-US', {
+  weekday: 'short', month: 'short', day: 'numeric', timeZone: 'America/Phoenix'
+});
+let selectedDay = 1;
 
 function dateFor(day) {
   return new Date(Date.UTC(2026, 9, day, 12));
+}
+
+function buildCalendar() {
+  const firstWeekday = dateFor(1).getUTCDay();
+  for (let slot = 0; slot < firstWeekday; slot++) {
+    const spacer = document.createElement('span');
+    spacer.setAttribute('aria-hidden', 'true');
+    calendarDays.append(spacer);
+  }
+  for (let day = 1; day <= 31; day++) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = day;
+    button.dataset.day = day;
+    button.setAttribute('aria-label', `${longDate.format(dateFor(day))}, 2026`);
+    button.addEventListener('click', () => {
+      selectedDay = day;
+      closeCalendar();
+      render();
+      calendarButton.focus();
+    });
+    calendarDays.append(button);
+  }
+}
+
+function closeCalendar() {
+  calendarPanel.hidden = true;
+  calendarButton.setAttribute('aria-expanded', 'false');
+  calendarButton.textContent = 'Show calendar';
 }
 
 function isOpen(course, dateKey) {
@@ -43,7 +77,7 @@ function detailFor(course, dateKey) {
 }
 
 function render() {
-  const day = Number(daySlider.value);
+  const day = selectedDay;
   const date = dateFor(day);
   const dateKey = `2026-10-${String(day).padStart(2, '0')}`;
   const query = searchInput.value.trim().toLocaleLowerCase();
@@ -53,10 +87,13 @@ function render() {
     return !query || haystack.includes(query);
   });
 
-  dayNumber.textContent = day;
-  selectedDate.textContent = longDate.format(date);
+  selectedDate.textContent = compactDate.format(date);
   previousDay.disabled = day === 1;
   nextDay.disabled = day === 31;
+  for (const button of calendarDays.querySelectorAll('button')) {
+    if (Number(button.dataset.day) === day) button.setAttribute('aria-current', 'date');
+    else button.removeAttribute('aria-current');
+  }
   openCount.textContent = open.length;
   resultNote.textContent = query
     ? `${visible.length} matching ${visible.length === 1 ? 'course' : 'courses'}`
@@ -88,11 +125,23 @@ function render() {
 }
 
 function stepDay(amount) {
-  daySlider.value = Math.max(1, Math.min(31, Number(daySlider.value) + amount));
+  selectedDay = Math.max(1, Math.min(31, selectedDay + amount));
   render();
 }
 
-daySlider.addEventListener('input', render);
+buildCalendar();
+calendarButton.addEventListener('click', () => {
+  const expanded = calendarButton.getAttribute('aria-expanded') === 'true';
+  calendarPanel.hidden = expanded;
+  calendarButton.setAttribute('aria-expanded', String(!expanded));
+  calendarButton.textContent = expanded ? 'Show calendar' : 'Hide calendar';
+});
+calendarPanel.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    closeCalendar();
+    calendarButton.focus();
+  }
+});
 previousDay.addEventListener('click', () => stepDay(-1));
 nextDay.addEventListener('click', () => stepDay(1));
 searchInput.addEventListener('input', render);
