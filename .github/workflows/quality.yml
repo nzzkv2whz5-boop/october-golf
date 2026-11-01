@@ -1,0 +1,47 @@
+name: Quality checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.js
+          node --check service-worker.js
+          node --check data/courses.js
+          node --test tests/*.test.js
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: .github/requirements-ci.txt
+
+      - name: Install data build dependency
+        run: python -m pip install -r .github/requirements-ci.txt
+
+      - name: Validate Python source
+        run: python -m py_compile scripts/build-data.py
+
+      - name: Verify generated course data is current
+        run: |
+          python scripts/build-data.py
+          git diff --exit-code -- data/courses.js
